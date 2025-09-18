@@ -48,6 +48,10 @@ Un JWT se compone de tres partes, separadas por puntos (`.`):
   - Autorización: Los JWT pueden contener información sobre permisos y roles del usuario, permitiendo implementar un control de acceso basado en roles.
   - Interoperabilidad: Los JWT son independientes de la plataforma y pueden ser utilizados por diferentes lenguajes de programación.
 
+   ## Diagrama :
+   - Spring Security + JWT Utilizado.
+   ![Diagrama de Spring Security + JWT](JWT%20Diagrama.png)
+
   ##### Tecnologías Utilizadas
   Dependencias Principales
   - Spring Web: Proporciona las funcionalidades necesarias para desarrollar aplicaciones web, incluyendo soporte para RESTful APIs.
