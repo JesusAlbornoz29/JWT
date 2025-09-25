@@ -3,8 +3,10 @@ package com.jalbornoz.springsecurity.controller;
 import com.jalbornoz.springsecurity.controller.models.AuthResponse;
 import com.jalbornoz.springsecurity.controller.models.AuthenticationRequest;
 import com.jalbornoz.springsecurity.controller.models.RegisterRequest;
+import com.jalbornoz.springsecurity.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.Response;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
 public class AuthController {
+
+    @Autowired
+    private AuthService authService;
 
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request){
